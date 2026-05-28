@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Modern Dictionary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7C3AED',
+                        accent: '#06B6D4'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-100 font-sans">
+    <div class="max-w-4xl mx-auto px-4 py-10">
+        <header class="mb-8">
+            <div>
+                <h1 class="text-5xl font-extrabold tracking-tight mb-7">Modern Dictionary Web-Application</h1>
+                <h2 class="text-slate-300">Fast, friendly definitions and examples.</h2>
+            </div>
+            <div class="text-sm text-slate-400">Made with Tailwind • Lightweight</div>
+        </header>
+
+        <main class="flex flex-col gap-10">
+            <section class="flex flex-col md:w-1/2">
+                <div class="glass p-6 rounded-xl min-w-100">
+                    <form id="search-form" class="flex gap-3 border border-1 rounded-xl">
+                        <input id="search-input" type="search" placeholder="Type a word (e.g. play)"
+                            class="flex-1 bg-transparent placeholder:text-slate-400 focus:outline-none text-slate-100  p-3" />
+                        <button type="submit"
+                            class="bg-primary hover:opacity-9 rounded-md font-extrabold mr-2">Search</button>
+                    </form>
+
+                    <div class="mt-6">
+                        <h3 class="text-sm text-slate-300 mb-2">Quick Examples</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <button class="example chip">play</button>
+                            <button class="example chip">serendipity</button>
+                            <button class="example chip">eloquent</button>
+                            <button class="example chip">aberration</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="result-section" class="flex flex-col md:w-2/3 mt-6 md:mt-0">
+                <div id="result" class="glass p-6 rounded-xl min-h-[220px]">
+                    <div id="placeholder" class="text-slate-400">Search for a word to see its definition, pronunciation,
+                        and examples.</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
